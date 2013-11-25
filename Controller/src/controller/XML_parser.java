@@ -208,10 +208,10 @@ public class XML_parser {
         System.out.println(naam.toUpperCase() + ": " + string);
     }
     
-    public List getInfo()
-    {
-        return container;
-    }
+//    public List getInfo()
+//    {
+//        return container;
+//    }
     
     public Container createContainer(Map info)
     {       
@@ -224,5 +224,10 @@ public class XML_parser {
     public Container getContainer(int id)
     {        
         return containerArray.get(id);
+    }
+    
+    public int getAantalContainers()
+    {
+        return containerArray.size();
     }
 }

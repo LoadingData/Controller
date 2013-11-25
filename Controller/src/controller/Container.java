@@ -62,8 +62,32 @@ public class Container {
         this.z = z;
                 
     }
-
-   
     
+    public String getAankomst_datum(){ return this.aankomst_datum; }
+    public String getAankomst_tijd(){ return this.aankomst_tijd; }
+    public String getAankomst_vervoer(){ return this.aankomst_vervoer; }
+    public String getAankomst_bedrijf(){ return this.aankomst_bedrijf; }
+    
+    public String getVertrek_datum(){ return this.vertrek_datum; }
+    public String getVertrek_tijd(){ return this.vertrek_tijd; }
+    public String getVertrek_vervoer(){ return this.vertrek_vervoer; }
+    public String getVertrek_bedrijf(){ return this.vertrek_bedrijf; }
+    
+    public String getEigenaar(){ return this.eigenaar; }
+    public int getContainer_nr(){ return this.container_nr; }
+    public int getGewicht_leeg(){ return this.gewicht_leeg; }
+    public int getGewicht_inhoud(){ return this.gewicht_inhoud; }
+    public String getInhoud(){ return this.inhoud; }
+    public String getSoort(){ return this.soort; }
+    public String getGevaar(){ return this.gevaar; }
+    public String getISO(){ return this.ISO; }
    
+    public int getX(){ return this.x; }
+    public int getY(){ return this.y; }
+    public int getZ(){ return this.z; }
+    
+       
+    
+       
+    
 }
