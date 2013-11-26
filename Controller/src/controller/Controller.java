@@ -21,6 +21,12 @@ public class Controller {
         // TODO code application logic here
         
         XML_parser xml = new XML_parser("hoi");
-        xml.xml_values("hoi");      
+        xml.xml_values("hoi"); 
+        
+        Server server = new Server();
+        while (true) 
+        {
+            server.run();
+        }
     }
 }

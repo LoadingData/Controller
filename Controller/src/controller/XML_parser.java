@@ -208,11 +208,6 @@ public class XML_parser {
         System.out.println(naam.toUpperCase() + ": " + string);
     }
     
-//    public List getInfo()
-//    {
-//        return container;
-//    }
-    
     public Container createContainer(Map info)
     {       
        Container container = new Container(info.get("aankomst_datum").toString(),info.get("aankomst_tijd").toString(),info.get("aankomst_vervoer").toString(),info.get("aankomst_bedrijf").toString(),info.get("vertrek_datum").toString(),info.get("vertrek_tijd").toString(),
