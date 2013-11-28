@@ -4,6 +4,8 @@
  */
 package controller;
 
+import java.util.Date;
+
 /**
  *
  * @author Jeroen
@@ -35,8 +37,14 @@ public class Container {
     private int y;
     private int z;
     
+    private int dag;
+    private int maand;
+    private int jaar;
+    
+    private Date vertrek_date;
+    
     public Container(String aankomst_datum, String aankomst_tijd, String aankomst_vervoer, String aankomst_bedrijf, String vertrek_datum, String vertrek_tijd, String vertrek_vervoer, String vertrek_bedrijf,
-    String eigenaar, int container_nr, int gewicht_leeg, int gewicht_inhoud, String inhoud, String soort, String gevaar, String ISO, int x, int y, int z)
+    String eigenaar, int container_nr, int gewicht_leeg, int gewicht_inhoud, String inhoud, String soort, String gevaar, String ISO, int x, int y, int z, int dag, int maand, int jaar)
     {
         this.aankomst_datum = aankomst_datum;
         this.aankomst_tijd = aankomst_tijd;
@@ -61,6 +69,9 @@ public class Container {
         this.y = y;
         this.z = z;
                 
+        this.dag = dag;
+        this.maand = maand;
+        this.jaar = jaar;
     }
     
     public String getAankomst_datum(){ return this.aankomst_datum; }
@@ -87,7 +98,14 @@ public class Container {
     public int getZ(){ return this.z; }
     
        
-    
+    public Date getDeparture_date()
+    {
+        vertrek_date.setDate(dag);
+        vertrek_date.setMonth(maand);
+        vertrek_date.setYear(jaar);
+        return vertrek_date;
+        
+    }
        
     
 }

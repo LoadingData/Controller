@@ -79,7 +79,8 @@ public class XML_parser {
                     // <d>,<m>,<j>
                     d = eElement.getElementsByTagName("d").item(0).getTextContent();
                     m = eElement.getElementsByTagName("m").item(0).getTextContent();
-                    j = eElement.getElementsByTagName("j").item(0).getTextContent();                     
+                    j = eElement.getElementsByTagName("j").item(0).getTextContent();   
+
                     info_map.put("aankomst_datum", getDate(d,m,j));                  
                     // </d>,</m>,</j>
                     // <tijd>
@@ -110,6 +111,9 @@ public class XML_parser {
                     d = eElement.getElementsByTagName("d").item(1).getTextContent();
                     m = eElement.getElementsByTagName("m").item(1).getTextContent();
                     j = eElement.getElementsByTagName("j").item(1).getTextContent(); 
+                    info_map.put("dag", eElement.getElementsByTagName("d").item(1).getTextContent());  
+                    info_map.put("maand", eElement.getElementsByTagName("m").item(1).getTextContent());
+                    info_map.put("jaar", eElement.getElementsByTagName("j").item(1).getTextContent());
                     info_map.put("vertrek_datum", getDate(d,m,j));
                     // </d>,</m>,</j>
                     // <tijd>  
@@ -212,7 +216,8 @@ public class XML_parser {
     {       
        Container container = new Container(info.get("aankomst_datum").toString(),info.get("aankomst_tijd").toString(),info.get("aankomst_vervoer").toString(),info.get("aankomst_bedrijf").toString(),info.get("vertrek_datum").toString(),info.get("vertrek_tijd").toString(),
                info.get("vertrek_vervoer").toString(),info.get("vertrek_bedrijf").toString(),info.get("naam_eigenaar").toString(),Integer.parseInt(info.get("containernr").toString()),Integer.parseInt(info.get("gewicht_leeg").toString()),Integer.parseInt(info.get("gewicht_inhoud").toString()),info.get("naam_inhoud").toString(),
-               info.get("soort").toString(),info.get("gevaar").toString(),info.get("ISO").toString(),Integer.parseInt(info.get("aankomst_X").toString()),Integer.parseInt(info.get("aankomst_Y").toString()),Integer.parseInt(info.get("aankomst_Z").toString()));
+               info.get("soort").toString(),info.get("gevaar").toString(),info.get("ISO").toString(),Integer.parseInt(info.get("aankomst_X").toString()),Integer.parseInt(info.get("aankomst_Y").toString()),Integer.parseInt(info.get("aankomst_Z").toString()),Integer.parseInt(info.get("dag").toString()),Integer.parseInt(info.get("maand").toString()),
+               Integer.parseInt(info.get("jaar").toString()));
        return container;
     }
     
@@ -224,5 +229,10 @@ public class XML_parser {
     public int getAantalContainers()
     {
         return containerArray.size();
+    }
+    
+    public List<HashMap<String, String>> sendList()
+    {
+        return container;
     }
 }

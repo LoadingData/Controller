@@ -23,10 +23,11 @@ public class Controller {
         XML_parser xml = new XML_parser("hoi");
         xml.xml_values("hoi"); 
         
-        Server server = new Server();
+        Server server = new Server(xml.sendList());
+        
         while (true) 
         {
-            server.run();
+            server.run();            
         }
     }
 }
